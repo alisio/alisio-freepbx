@@ -5,7 +5,11 @@
 1. [Setup](#setup)
 1. [Usage](#usage)
    * [Example](#usage-example)
+   * [Testing](#testing)
 1. [Reference](#reference)
+   * [Classes](#classes)
+   * [Defined Types](#defined-types)
+   * [Resources](#resources)
 1. [Development](#development)
 1. [License](#license)
 
@@ -65,7 +69,34 @@ class {'freepbx':
 }
 ```
 
+### Testing
+
+It is possible to use vagrant to provision a VM for testing purposes. All you
+have to do is type:
+
+```sh
+# Start the VM
+vagrant up
+# Access VM terminal
+vagrant ssh
+```
+Once the provisioning ends you can type the VM's IP address to access the FreePBX Web UI.
+
 ## Reference
+
+### Classes
+
+* `freepbx`: Install FreePBX and its dependencies
+
+### Defined Types
+
+* `freepbx::config::repo` : Enable or disable FreePBX repositories
+* `freepbx::config::module`: Install or remove FreePBX modules
+
+
+### Resources
+
+#### Freepbx
 
 * `asterisk_install`          = Enable or disable asterisk install. Default (boolean): true
 * `asterisk_default_language` = Set asterisk default language in /etc/asterisk/asterisk.conf file. Default (string): 'en'
@@ -76,6 +107,19 @@ class {'freepbx':
 * `reboot_after_install`      = Enable reboot after install. Default (boolean): false
 * `selinux_mode`              = Set SELinux mode. Default (string): 'disabled'
 * `selinux_type`              = Set SELinux type. Default (string): 'targeted'
+
+#### Freepbx::config::repo
+
+* `repo`: The name of the repository.
+* `enable`: Enable or disable repository. Default (boolean): true
+* `timeout`: Timeout for the operation in seconds. Default (integer): 120,
+
+#### Freepbx::config::module
+
+* `module`: Name of the module
+* `ensure`: Ensure that the module is present or absent. Default (string): present
+* `timeout`: Timeout for the operation in seconds. Default (integer): 120,
+Â
 
 ## Limitations
 
