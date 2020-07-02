@@ -26,6 +26,50 @@ class freepbx::params {
   $asterisk_verbose       = 3
   $asterisk_version       = 16
   $asterisk_sounds_folder = '/var/lib/asterisk/sounds'
+  $freepbx_modules        = [
+    'announcement',
+    'backup',
+    'blacklist',
+    'certman',
+    'certman',
+    'customcontexts',
+    'callforward',
+    'callwaiting',
+    'callback',
+    'campon',
+    'donotdisturb',
+    'dundicheck',
+    'endpointman',
+    'fax',
+    'findmefollow',
+    'hotelwakeup',
+    'iaxsettings',
+    'ivr',
+    'manager',
+    'miscapps',
+    'miscdests',
+    'paging',
+    'parking',
+    'pinsets',
+    'presencestate',
+    'phonebook',
+    'printextensions',
+    'queues',
+    'queueprio',
+    'restapi',
+    'ringgroups',
+    'setcid',
+    'speeddial',
+    'timeconditions',
+    'ttsengines',
+    'tts',
+    'webrtc',
+  ]
+  $freepbx_repo           = [
+    'extended',
+    'standard',
+    'unsupported'
+  ]
   $freepbx_version        = '14.0'
   $selinux_mode           = 'disabled'
   $selinux_type           = 'targeted'
