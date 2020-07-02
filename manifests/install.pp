@@ -46,18 +46,6 @@ class freepbx::install inherits freepbx {
       group   => 'asterisk',
       require => Package['asterisk'],
     }
-    -> archive { 'Add portuguese audio prompts':
-      ensure           => present,
-      path             => '/usr/src/asterisk-sounds-core-pt-BR-sln16.zip',
-      source           => 'https://www.asterisksounds.org/pt-br/download/asterisk-sounds-core-pt-BR-sln16.zip',
-      extract          => true,
-      extract_path     => '/var/lib/asterisk/sounds/pt_BR',
-      provider         => 'wget',
-      download_options => '--continue ',
-      require          => Package['asterisk'],
-      cleanup          => true,
-      creates          => "${freepbx::asterisk_sounds_folder}/pt_BR/agent-alreadyon.sln16",
-    }
   }
   archive { "/usr/src/${freepbx::freepbx_version}-latest.tgz" :
     ensure           => present,
