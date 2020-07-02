@@ -1,0 +1,80 @@
+[webtatic-archive]
+name=Webtatic Repository EL7 - $basearch - Archive
+#baseurl=https://repo.webtatic.com/yum/el7-archive/$basearch/
+mirrorlist=https://mirror.webtatic.com/yum/el7-archive/$basearch/mirrorlist
+failovermethod=priority
+enabled=0
+gpgcheck=0
+gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-webtatic-el7
+
+[webtatic-archive-debuginfo]
+name=Webtatic Repository EL7 - $basearch - Archive Debug
+#baseurl=https://repo.webtatic.com/yum/el7-archive/$basearch/debug/
+mirrorlist=https://mirror.webtatic.com/yum/el7-archive/$basearch/debug/mirrorlist
+failovermethod=priority
+enabled=0
+gpgcheck=0
+gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-webtatic-el7
+
+[webtatic-archive-source]
+name=Webtatic Repository EL7 - $basearch - Archive Source
+#baseurl=https://repo.webtatic.com/yum/el7-archive/SRPMS/
+mirrorlist=https://mirror.webtatic.com/yum/el7-archive/SRPMS/mirrorlist
+failovermethod=priority
+enabled=0
+gpgcheck=0
+gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-webtatic-el7
+
+[webtatic]
+name=Webtatic Repository EL7 - $basearch
+#baseurl=https://repo.webtatic.com/yum/el7/$basearch/
+mirrorlist=https://mirror.webtatic.com/yum/el7/$basearch/mirrorlist
+failovermethod=priority
+enabled=1
+gpgcheck=0
+gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-webtatic-el7
+
+[webtatic-debuginfo]
+name=Webtatic Repository EL7 - $basearch - Debug
+#baseurl=https://repo.webtatic.com/yum/el7/$basearch/debug/
+mirrorlist=https://mirror.webtatic.com/yum/el7/$basearch/debug/mirrorlist
+failovermethod=priority
+enabled=0
+gpgcheck=0
+gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-webtatic-el7
+
+[webtatic-source]
+name=Webtatic Repository EL7 - $basearch - Source
+#baseurl=https://repo.webtatic.com/yum/el7/SRPMS/
+mirrorlist=https://mirror.webtatic.com/yum/el7/SRPMS/mirrorlist
+failovermethod=priority
+enabled=0
+gpgcheck=0
+gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-webtatic-el7
+
+[webtatic-testing]
+name=Webtatic Repository EL7 - $basearch - Testing
+#baseurl=https://repo.webtatic.com/yum/el7-testing/$basearch/
+mirrorlist=https://mirror.webtatic.com/yum/el7-testing/$basearch/mirrorlist
+failovermethod=priority
+enabled=0
+gpgcheck=0
+gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-webtatic-el7
+
+[webtatic-testing-debuginfo]
+name=Webtatic Repository EL7 - $basearch - Testing Debug
+#baseurl=https://repo.webtatic.com/yum/el7-testing/$basearch/debug/
+mirrorlist=https://mirror.webtatic.com/yum/el7-testing/$basearch/debug/mirrorlist
+failovermethod=priority
+enabled=0
+gpgcheck=0
+gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-webtatic-el7
+
+[webtatic-testing-source]
+name=Webtatic Repository EL7 - $basearch - Testing Source
+#baseurl=https://repo.webtatic.com/yum/el7-testing/SRPMS/
+mirrorlist=https://mirror.webtatic.com/yum/el7-testing/SRPMS/mirrorlist
+failovermethod=priority
+enabled=0
+gpgcheck=0
+gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-webtatic-el7

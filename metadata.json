@@ -1,0 +1,77 @@
+{
+  "name": "alisio-freepbx",
+  "version": "0.1.0",
+  "author": "Antonio Alisio de Meneses Cordeiro",
+  "summary": "",
+  "license": "Apache-2.0",
+  "source": "",
+  "dependencies": [
+    {
+      "name": "puppet-archive",
+      "version_requirement": ">= 4.5.0 < 5.0.0"
+    },
+    {
+      "name": "puppet-nodejs",
+      "version_requirement": ">= 8.0.0 < 9.0.0"
+    },
+    {
+      "name": "puppet-selinux",
+      "version_requirement": ">= 3.2.0 < 4.0.0"
+    },
+    {
+      "name": "puppet-yum",
+      "version_requirement": ">= 4.2.0 < 5.0.0"
+    },
+    {
+      "name": "puppetlabs-augeas_core",
+      "version_requirement": ">= 1.0.5 < 2.0.0"
+    },
+    {
+      "name": "puppetlabs-concat",
+      "version_requirement": ">= 6.2.0 < 7.0.0"
+    },
+    {
+      "name": "puppetlabs-stdlib",
+      "version_requirement": ">= 5.2.0 < 7.0.0"
+    },
+    {
+      "name": "puppetlabs-translate",
+      "version_requirement": ">= 2.2.0 < 3.0.0"
+    }
+  ],
+  "operatingsystem_support": [
+    {
+      "operatingsystem": "CentOS",
+      "operatingsystemrelease": [
+        "7"
+      ]
+    },
+    {
+      "operatingsystem": "OracleLinux",
+      "operatingsystemrelease": [
+        "7"
+      ]
+    },
+    {
+      "operatingsystem": "RedHat",
+      "operatingsystemrelease": [
+        "8"
+      ]
+    },
+    {
+      "operatingsystem": "Scientific",
+      "operatingsystemrelease": [
+        "7"
+      ]
+    }
+  ],
+  "requirements": [
+    {
+      "name": "puppet",
+      "version_requirement": ">= 4.10.0 < 7.0.0"
+    }
+  ],
+  "pdk-version": "1.17.0",
+  "template-url": "pdk-default#1.17.0",
+  "template-ref": "tags/1.17.0-0-gd3a4319"
+}
