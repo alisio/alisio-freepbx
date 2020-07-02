@@ -7,14 +7,21 @@ class freepbx::params {
   $asterisk_default_language = 'pt-br'
   $asterisk_packages      = [
     'asterisk',
+    'asterisk-ael',
     'asterisk-iax2',
+    'asterisk-fax',
     'asterisk-ldap',
+    'asterisk-minivm',
     'asterisk-mp3',
+    'asterisk-mysql',
+    'asterisk-ooh323',
     'asterisk-oss',
     'asterisk-pjsip',
     'asterisk-sip',
     'asterisk-sounds-core-en-sln16',
+    'asterisk-sqlite',
   ]
+
   $asterisk_repo_install  = true
   $asterisk_verbose       = 3
   $asterisk_version       = 16
@@ -29,7 +36,7 @@ class freepbx::params {
     'audiofile-devel','gtk2-devel','subversion','kernel-devel','git','crontabs','cronie',
     'cronie-anacron','uuid-devel','sqlite-devel','ngrep','nmap-ncat','net-tools','gnutls-devel','python-devel','texinfo',
     'libuuid-devel','php56w','php56w-pdo','php56w-mysql','php56w-mbstring','php56w-pear',
-    'php56w-process','php56w-xml','php56w-opcache','php56w-ldap','php56w-intl','php56w-soap','unzip'
+    'php56w-process','php56w-xml','php56w-opcache','php56w-ldap','php56w-intl','php56w-soap'
   ]
   # Upload maxsize in MB
   $php_upload_maxsize     = 300
