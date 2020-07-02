@@ -17,13 +17,22 @@ class freepbx::postinstall inherits freepbx {
       path        => '/usr/bin:/usr/sbin:/bin:/usr/local/bin',
       refreshonly => true,
       require     => Exec["Config FreePBX ${freepbx::freepbx_version}"],
+      notify      => Exec['Set FreePBX file permission'],
     }
   } else {
     exec { "Config FreePBX ${freepbx::freepbx_version}":
       command   => 'cd /usr/src/freepbx/; ./install -n',
+      notify    => Exec['Set FreePBX file permission'],
       unless    => 'test -f /var/www/html/admin/functions.inc.php',
       path      => '/usr/bin:/usr/sbin:/bin:/usr/local/bin',
       logoutput => true,
     }
+  }
+  exec { 'Set FreePBX file permission':
+    command     => '/sbin/fwconsole chown',
+    refreshonly => true,
+    unless      => 'test -f /var/www/html/admin/functions.inc.php',
+    path        => '/usr/bin:/usr/sbin:/bin:/usr/local/bin',
+    logoutput   => true,
   }
 }
