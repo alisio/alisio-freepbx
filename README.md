@@ -88,10 +88,10 @@ Once the provisioning ends you can type the VM's IP address to access the FreePB
 Installing a test FreePBX on a remote server using bolt (mind you that a passwordless ssh key access must be configured first):
 
 ```sh
-bolt task run puppet_agent::install --targets 164.90.186.216 -u root
-bolt file upload tests/freepbx.pp /tmp/freepbx.pp --targets 164.90.186.216 -u root
-bolt command run '/opt/puppetlabs/bin/puppet module install alisio-freepbx' --targets 164.90.186.216 -u root
-bolt command run '/opt/puppetlabs/bin/puppet apply /tmp/freepbx.pp' --targets 164.90.186.216 -u root
+bolt task run puppet_agent::install --targets SERVER_IP_ADDRESS -u root
+bolt file upload tests/freepbx.pp /tmp/freepbx.pp --targets SERVER_IP_ADDRESS -u root
+bolt command run '/opt/puppetlabs/bin/puppet module install alisio-freepbx' --targets SERVER_IP_ADDRESS -u root
+bolt command run '/opt/puppetlabs/bin/puppet apply /tmp/freepbx.pp' --targets SERVER_IP_ADDRESS -u root
 
 ```
 
