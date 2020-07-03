@@ -1,5 +1,18 @@
 # Changelog
 
+## Release 0.1.3
+
+**Features**
+
+- No new features
+
+**Bugfixes**
+
+- Remove garbage characters from README
+
+**Known Issues**
+- freepbx::config::repo doesn't check if repos are enabled and runs everytime
+
 ## Release 0.1.2
 
 **Features**
