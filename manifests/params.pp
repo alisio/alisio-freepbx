@@ -80,7 +80,7 @@ class freepbx::params {
     'audiofile-devel','gtk2-devel','subversion','kernel-devel','git','crontabs','cronie',
     'cronie-anacron','uuid-devel','sqlite-devel','ngrep','nmap-ncat','net-tools','gnutls-devel','python-devel','texinfo',
     'libuuid-devel','php56w','php56w-pdo','php56w-mysql','php56w-mbstring','php56w-pear',
-    'php56w-process','php56w-xml','php56w-opcache','php56w-ldap','php56w-intl','php56w-soap'
+    'php56w-process','php56w-xml','php56w-opcache','php56w-ldap','php56w-intl','php56w-soap','wget'
   ]
   # Upload maxsize in MB
   $php_upload_maxsize     = 300
