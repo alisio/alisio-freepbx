@@ -71,6 +71,7 @@ class {'freepbx':
 
 ### Testing
 
+#### In a virtualbox machine using Vagrant
 It is possible to use vagrant to provision a VM for testing purposes. All you
 have to do is type:
 
@@ -81,6 +82,30 @@ vagrant up
 vagrant ssh
 ```
 Once the provisioning ends you can type the VM's IP address to access the FreePBX Web UI.
+
+#### In a remote server using bolt
+
+Installing a test FreePBX on a remote server using bolt (mind you that a passwordless ssh key access must be configured first):
+
+```sh
+bolt task run puppet_agent::install --targets 164.90.186.216 -u root
+bolt file upload tests/freepbx.pp /tmp/freepbx.pp --targets 164.90.186.216 -u root
+bolt command run '/opt/puppetlabs/bin/puppet module install alisio-freepbx' --targets 164.90.186.216 -u root
+bolt command run '/opt/puppetlabs/bin/puppet apply /tmp/freepbx.pp' --targets 164.90.186.216 -u root
+
+```
+
+#### In a local server
+
+Installing locally on a server:
+
+```bash
+rpm -Uvh https://yum.puppet.com/puppet5-release-el-7.noarch.rpm
+yum -y --nogpgcheck install puppet-agent git
+/opt/puppetlabs/bin/puppet module install alisio-freepbx
+git clone https://github.com/alisio/alisio-freepbx.git
+/opt/puppetlabs/bin/puppet apply alisio-freepbx/tests/freepbx.pp
+```
 
 ## Reference
 
