@@ -1,6 +1,6 @@
 {
   "name": "alisio-freepbx",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "author": "Antonio Alisio de Meneses Cordeiro",
   "summary": "This module installs FreePBX open source IP PBX and its dependencies",
   "license": "Apache-2.0",
