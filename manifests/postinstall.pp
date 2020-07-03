@@ -35,7 +35,7 @@ class freepbx::postinstall inherits freepbx {
     path        => '/usr/bin:/usr/sbin:/bin:/usr/local/bin',
     logoutput   => true,
   }
-  ~> exec { 'First Apply':
+  ~> exec { 'FreePBX Apply':
     command     => '/var/lib/asterisk/bin/retrieve_conf',
     refreshonly => true,
     path        => '/usr/bin:/usr/sbin:/bin:/usr/local/bin',

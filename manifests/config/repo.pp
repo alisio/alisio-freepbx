@@ -9,12 +9,14 @@ define freepbx::config::repo (
       command => "/usr/sbin/fwconsole ma enablerepo ${repo}",
       timeout => $timeout,
       require => Exec["Config FreePBX ${freepbx::freepbx_version}"],
+      notify  => Exec['Set FreePBX file permission']
     }
   } else {
     exec { "Disable FreePBX repo ${repo}" :
       command => "/usr/sbin/fwconsole ma disablerepo ${repo}",
       timeout => $timeout,
       require => Exec["Config FreePBX ${freepbx::freepbx_version}"],
+      notify  => Exec['Set FreePBX file permission']
     }
   }
 }

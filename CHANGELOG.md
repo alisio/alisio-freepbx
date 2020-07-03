@@ -1,5 +1,19 @@
 # Changelog
 
+## Release 0.1.2
+
+**Features**
+
+- Add testing instructions to the README file
+
+**Bugfixes**
+
+- Fix freepbx::module defined type
+- Apply button throws an error
+
+**Known Issues**
+- Error when applying changes. Fixed running /var/lib/asterisk/bin/retrieve_conf
+
 ## Release 0.1.1
 
 **Features**

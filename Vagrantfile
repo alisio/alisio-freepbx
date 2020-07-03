@@ -18,9 +18,7 @@ Vagrant.configure("2") do |config|
   end
 
   config.vm.provision "shell", inline: <<-SHELL
-    yum install -y wget vim
-    wget https://yum.puppet.com/puppet5-release-el-7.noarch.rpm
-    rpm -Uvh puppet5-release-el-7.noarch.rpm
+    rpm -Uvh https://yum.puppet.com/puppet5-release-el-7.noarch.rpm
     yum -y --nogpgcheck install puppet-agent
     ln -s /vagrant /opt/puppetlabs/puppet/modules/freepbx
     /opt/puppetlabs/bin/puppet module install puppet-archive --version 4.5.0

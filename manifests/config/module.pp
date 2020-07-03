@@ -10,12 +10,14 @@ define freepbx::config::module (
       unless  => "/usr/sbin/fwconsole ma list | egrep -q ${module}",
       timeout => $timeout,
       require => Exec["Config FreePBX ${freepbx::freepbx_version}"],
+      notify  => Exec['Set FreePBX file permission']
     }
     -> exec { "Enable FreePBX ${module} module" :
       command => "/usr/sbin/fwconsole ma /usr/sbin/fwconsole ma enable ${module}",
       onlyif  => "/usr/sbin/fwconsole ma list | egrep -q ${module}.*Disabled",
       timeout => $timeout,
       require => Exec["Config FreePBX ${freepbx::freepbx_version}"],
+      notify  => Exec['Set FreePBX file permission']
     }
   } else {
     exec { "Disable FreePBX ${module} module" :
@@ -23,6 +25,7 @@ define freepbx::config::module (
       onlyif  => "/usr/sbin/fwconsole ma list | egrep -q ${module}.*Enabled",
       timeout => $timeout,
       require => Exec["Config FreePBX ${freepbx::freepbx_version}"],
+      notify  => Exec['Set FreePBX file permission']
     }
   }
 }
