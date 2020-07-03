@@ -42,7 +42,7 @@ This module requires the requirements:
 
 ### Usage Example
 
-Simple example that donwloads and installs FreePBX, asterisk and all dependencies
+Simple example that downloads and installs FreePBX, asterisk and all dependencies
 
 ```puppet
 include freepbx
