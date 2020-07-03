@@ -143,8 +143,7 @@ git clone https://github.com/alisio/alisio-freepbx.git
 
 * `module`: Name of the module
 * `ensure`: Ensure that the module is present or absent. Default (string): present
-* `timeout`: Timeout for the operation in seconds. Default (integer): 120,
-Â
+* `timeout`: Timeout for the operation in seconds. Default (integer): 120
 
 ## Limitations
 
