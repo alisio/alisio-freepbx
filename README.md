@@ -94,6 +94,7 @@ bolt command run '/opt/puppetlabs/bin/puppet module install alisio-freepbx' --ta
 bolt command run '/opt/puppetlabs/bin/puppet apply /tmp/freepbx.pp' --targets SERVER_IP_ADDRESS -u root
 
 ```
+Once the provisioning ends you can type IP address of the server on your browser to access the FreePBX Web UI.
 
 #### In a local server
 
@@ -106,6 +107,7 @@ yum -y --nogpgcheck install puppet-agent git
 git clone https://github.com/alisio/alisio-freepbx.git
 /opt/puppetlabs/bin/puppet apply alisio-freepbx/tests/freepbx.pp
 ```
+Once the provisioning ends you can type IP address of the server on your browser to access the FreePBX Web UI.
 
 ## Reference
 
