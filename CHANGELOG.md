@@ -2,6 +2,15 @@
 
 ## Release 0.1.3
 
+**Bugfixes**
+
+- Remove unused variable
+
+**Known Issues**
+- freepbx::config::repo doesn't check if repos are enabled and runs everytime
+
+## Release 0.1.3
+
 **Features**
 
 - Remove puppet-nodejs module depedency

@@ -13,7 +13,6 @@ class freepbx (
   $asterisk_sounds_folder    = $freepbx::params::asterisk_sounds_folder,
   $freepbx_groups_deps       = $freepbx::params::freepbx_groups_deps,
   $freepbx_package_deps      = $freepbx::params::freepbx_package_deps,
-  $freepbx_repo_install      = $freepbx::params::freepbx_repo_install,
   $freepbx_version           = $freepbx::params::freepbx_version,
   $package_repo_install      = $freepbx::params::package_repo_install,
   $reboot_after_install      = $freepbx::params::reboot_after_install,
