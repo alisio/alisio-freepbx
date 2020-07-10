@@ -22,13 +22,12 @@ Vagrant.configure("2") do |config|
     yum -y --nogpgcheck install puppet-agent
     ln -s /vagrant /opt/puppetlabs/puppet/modules/freepbx
     /opt/puppetlabs/bin/puppet module install puppet-archive --version 4.5.0
-    /opt/puppetlabs/bin/puppet module install puppet-nodejs --version 8.0.0
     /opt/puppetlabs/bin/puppet module install puppet-selinux --version 3.2.0
     /opt/puppetlabs/bin/puppet module install puppet-yum --version 4.2.0
     /opt/puppetlabs/bin/puppet module install puppetlabs-augeas_core --version 1.0.5
     /opt/puppetlabs/bin/puppet module install puppetlabs-stdlib --version 6.3.0
     /opt/puppetlabs/bin/puppet module install puppetlabs-translate --version 2.2.0
-    /opt/puppetlabs/bin/puppet apply /vagrant/tests
+    /opt/puppetlabs/bin/puppet apply /vagrant/tests/freepbx.pp
 
   SHELL
 end
