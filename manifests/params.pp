@@ -21,8 +21,6 @@ class freepbx::params {
     'asterisk-sounds-core-en-sln16',
     'asterisk-sqlite',
   ]
-
-  $asterisk_repo_install  = true
   $asterisk_verbose       = 3
   $asterisk_version       = 16
   $asterisk_sounds_folder = '/var/lib/asterisk/sounds'
@@ -65,7 +63,7 @@ class freepbx::params {
     'tts',
     'webrtc',
   ]
-  $freepbx_repo           = [
+  $freepbx_module_repo           = [
     'extended',
     'standard',
     'unsupported'
@@ -82,6 +80,7 @@ class freepbx::params {
     'libuuid-devel','php56w','php56w-pdo','php56w-mysql','php56w-mbstring','php56w-pear',
     'php56w-process','php56w-xml','php56w-opcache','php56w-ldap','php56w-intl','php56w-soap','wget'
   ]
+  $package_repo_install   = true
   # Upload maxsize in MB
   $php_upload_maxsize     = 300
   $reboot_after_install   = false

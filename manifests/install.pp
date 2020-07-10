@@ -8,20 +8,32 @@ class freepbx::install inherits freepbx {
   yum::group { $freepbx::freepbx_groups_deps :
     ensure => 'present';
   }
-  class { 'nodejs':
-    repo_url_suffix => '8.x',
+  archive { '/usr/src/node-v8.9.4-linux-x64.tar.gz' :
+    ensure           => present,
+    source           => 'https://nodejs.org/dist/v8.9.4/node-v8.9.4-linux-x64.tar.gz',
+    extract          => true,
+    extract_path     => '/usr/local',
+    provider         => 'wget',
+    extract_flags    => '--strip-components 1 -xzvf',
+    download_options => '--continue --no-check-certificate',
+    creates          => '/usr/local/bin/node',
+    cleanup          => true,
   }
-  file { '/etc/yum.repos.d/webtatic.repo':
-    ensure => file,
-    mode   => '0644',
-    source => 'puppet:///modules/freepbx/etc/yum.repos.d/webtatic.repo',
+  if $freepbx::package_repo_install {
+    file { '/etc/yum.repos.d/webtatic.repo':
+      ensure => file,
+      mode   => '0644',
+      source => 'puppet:///modules/freepbx/etc/yum.repos.d/webtatic.repo',
+    }
+    -> package { 'epel-release':
+      ensure => installed,
+    }
+    ensure_packages($freepbx::freepbx_package_deps, {ensure=> 'present',require => Package['epel-release']})
+  } else {
+    ensure_packages($freepbx::freepbx_package_deps, {ensure=> 'present'})
   }
-  -> package { 'epel-release':
-    ensure => installed,
-  }
-  ensure_packages($freepbx::freepbx_package_deps, {ensure=> 'present',require => Package['epel-release']})
   if $freepbx::asterisk_install {
-    if $freepbx::asterisk_repo_install {
+    if $freepbx::package_repo_install {
       file { '/etc/yum.repos.d/asterisk.repo':
         ensure  => file,
         content => template('freepbx/etc/yum.repos.d/asterisk.repo.erb'),
