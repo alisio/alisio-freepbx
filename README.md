@@ -69,6 +69,11 @@ class {'freepbx':
 }
 ```
 
+Install FreePBX module 'queue'
+```puppet
+freepbx::config::module {'queue':}
+```
+
 ### Testing
 
 #### In a virtualbox machine using Vagrant
@@ -128,7 +133,7 @@ Once the provisioning ends you can type IP address of the server on your browser
 * `asterisk_install`          = Enable or disable asterisk install. Default (boolean): true
 * `asterisk_default_language` = Set asterisk default language in /etc/asterisk/asterisk.conf file. Default (string): 'en'
 * `asterisk_verbose`          = Set asterisk verbose in /etc/asterisk/asterisk.conf file. Default (integer): 1
-* `asterisk_repo_install`     = Enable or disable installation of asterisk related repos. Default (boolean): true
+* `package_repo_install `     = Enable or disable installation of FreePBX and asterisk related repos. Default (boolean): true
 * `asterisk_version`          = Set asterisk version to be installed. Default (integer): 16
 * `freepbx_version`           = Set FreePBX version to me installed. Only version 14 was tested. Default (integer): 14
 * `reboot_after_install`      = Enable reboot after install. Default (boolean): false

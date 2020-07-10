@@ -4,7 +4,8 @@
 
 **Features**
 
-- No new features
+- Remove puppet-nodejs module depedency
+- Add package_repo_install for control installation of related repositories
 
 **Bugfixes**
 
