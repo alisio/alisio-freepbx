@@ -31,24 +31,24 @@ class {'freepbx':
   path             => '/usr/src/asterisk-sounds-core-pt-BR-sln16.zip',
   source           => 'https://www.asterisksounds.org/pt-br/download/asterisk-sounds-core-pt-BR-sln16.zip',
   extract          => true,
-  extract_path     => '/var/lib/asterisk/sounds/pt_BR',
+  extract_path     => '/usr/share/asterisk/sounds/pt_BR',
   provider         => 'wget',
   download_options => '--continue ',
   require          => Package['asterisk'],
   cleanup          => true,
-  creates          => '/var/lib/asterisk/sounds/pt_BR/agent-alreadyon.sln16',
+  creates          => '/usr/share/asterisk/sounds/pt_BR/agent-alreadyon.sln16',
 }
 -> archive { 'Add portuguese extra audio prompts':
   ensure           => present,
   path             => '/usr/src/asterisk-sounds-extra-pt-BR-1.11.10.zip',
   source           => 'https://www.asterisksounds.org/sites/asterisksounds.org/files/sounds/pt-BR/download/asterisk-sounds-extra-pt-BR-1.11.10.zip',
   extract          => true,
-  extract_path     => '/var/lib/asterisk/sounds/pt_BR',
+  extract_path     => '/usr/share/asterisk/sounds/pt_BR',
   provider         => 'wget',
   download_options => '--continue ',
   require          => Package['asterisk'],
   cleanup          => true,
-  creates          => '/var/lib/asterisk/sounds/pt_BR/zombies.sln16',
+  creates          => '/usr/share/asterisk/sounds/pt_BR/zombies.sln16',
 }
 freepbx::config::repo {['standard','extended','unsupported']:}
 -> freepbx::config::module {[
