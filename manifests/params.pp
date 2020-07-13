@@ -19,11 +19,12 @@ class freepbx::params {
     'asterisk-pjsip',
     'asterisk-sip',
     'asterisk-sounds-core-en-sln16',
+    'asterisk-moh-opsound-wav',
     'asterisk-sqlite',
   ]
   $asterisk_verbose       = 3
   $asterisk_version       = 16
-  $asterisk_sounds_folder = '/var/lib/asterisk/sounds'
+  $asterisk_sounds_folder = '/usr/share/asterisk/sounds/'
   $freepbx_modules        = [
     'announcement',
     'soundlang',
