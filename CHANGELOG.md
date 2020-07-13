@@ -1,6 +1,18 @@
 # Changelog
 
-## Release 0.1.3
+## Release 0.1.5
+
+**Features**
+- Add pt_BR extra audio install to test manifest
+
+**Bugfixes**
+
+-
+
+**Known Issues**
+- freepbx::config::repo doesn't check if repos are enabled and runs everytime
+
+## Release 0.1.4
 
 **Bugfixes**
 
