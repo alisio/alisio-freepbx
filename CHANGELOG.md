@@ -4,10 +4,10 @@
 
 **Features**
 - Add pt_BR extra audio install to test manifest
+- Add wav music on hold package
 
 **Bugfixes**
-
--
+- Fix asterisk sounds folder
 
 **Known Issues**
 - freepbx::config::repo doesn't check if repos are enabled and runs everytime
