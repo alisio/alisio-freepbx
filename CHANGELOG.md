@@ -1,5 +1,16 @@
 # Changelog
 
+## Release 0.1.6
+
+**Features**
+
+**Bugfixes**
+- Set php_set_memory_limit to 256M
+
+**Known Issues**
+- freepbx::config::repo doesn't check if repos are enabled and runs everytime
+
+
 ## Release 0.1.5
 
 **Features**
