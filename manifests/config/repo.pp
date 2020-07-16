@@ -7,6 +7,7 @@ define freepbx::config::repo (
   if $enable{
     exec { "Enable FreePBX repo ${repo}" :
       command => "/usr/sbin/fwconsole ma enablerepo ${repo}",
+      unless  => "/bin/mysql asterisk -e 'SELECT data FROM module_xml WHERE id = \"repos_json\"' -B | egrep ${repo}",
       timeout => $timeout,
       require => Exec["Config FreePBX ${freepbx::freepbx_version}"],
       notify  => Exec['Set FreePBX file permission']
@@ -14,6 +15,7 @@ define freepbx::config::repo (
   } else {
     exec { "Disable FreePBX repo ${repo}" :
       command => "/usr/sbin/fwconsole ma disablerepo ${repo}",
+      onlyif  => "/bin/mysql asterisk -e 'SELECT data FROM module_xml WHERE id = \"repos_json\"' -B | egrep ${repo}",
       timeout => $timeout,
       require => Exec["Config FreePBX ${freepbx::freepbx_version}"],
       notify  => Exec['Set FreePBX file permission']
