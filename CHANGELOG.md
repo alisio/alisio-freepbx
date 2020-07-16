@@ -6,10 +6,10 @@
 
 **Bugfixes**
 - Set php_set_memory_limit to 256M
-
-**Known Issues**
 - freepbx::config::repo doesn't check if repos are enabled and runs everytime
 
+**Known Issues**
+- FreePBX module installation check takes too long when several modules are managed through puppet
 
 ## Release 0.1.5
 
