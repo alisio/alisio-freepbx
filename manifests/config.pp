@@ -13,6 +13,10 @@ class freepbx::config inherits freepbx {
     context =>  '/files/etc/php.ini/PHP',
     changes =>  ["set upload_max_filesize ${freepbx::params::php_upload_maxsize}M"],
   }
+  augeas { 'configure_php_memory_limit':
+    context =>  '/files/etc/php.ini/PHP',
+    changes =>  ["set memory_limit ${freepbx::params::php_set_memory_limit}M"],
+  }
   augeas { 'Set asterisk runuser':
     context =>  '/files/etc/php.ini/PHP',
     changes =>  ["set upload_max_filesize ${freepbx::params::php_upload_maxsize}M"],

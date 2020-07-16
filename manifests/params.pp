@@ -93,6 +93,7 @@ class freepbx::params {
   ]
   $package_repo_install   = true
   # Upload maxsize in MB
+  $php_set_memory_limit   = 256
   $php_upload_maxsize     = 300
   $reboot_after_install   = false
 }
